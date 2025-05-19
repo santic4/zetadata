@@ -1,0 +1,64 @@
+# 🟢 Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 🟢 Logs
+logs
+*.log
+*.log.*
+
+# 🟢 Sistema operativo
+.DS_Store
+Thumbs.db
+
+# 🟢 Editor config
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 🟢 Entornos
+.env
+.env.* # Cubre .env.development, .env.local, etc.
+
+# 🟢 Build
+dist/
+build/
+*.tsbuildinfo
+
+# 🟢 Coverage y testing
+coverage/
+.nyc_output/
+jest-html-reporters-*
+
+# 🟢 Docker
+docker-compose.override.yml
+docker/data/
+docker/nginx.conf # opcional si es generado o no querés subirlo
+*.pid
+
+# 🟢 CI/CD
+.github/workflows/*.log
+
+# 🟢 Frontend (client/)
+client/node_modules/
+client/build/
+client/.next/
+client/.turbo/
+client/.env*
+
+# 🟢 Backend (server/)
+server/node_modules/
+server/dist/
+server/.env*
+
+# 🟢 Otros
+*.sqlite
+*.tgz
+*.pem
+*.key
+*.crt
+*.db
