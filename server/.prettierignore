@@ -1,0 +1,65 @@
+# Node modules y dependencias
+node_modules/
+bower_components/
+
+# Build, dist, output de producción
+dist/
+build/
+out/
+coverage/
+coverage-final.json
+
+# Archivos de logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos temporales y de sistema
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Carpetas específicas de IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Configuraciones específicas y lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos específicos de pruebas y snapshots
+*.snap
+
+# Archivos generados por herramientas de documentación
+docs/api/
+
+# Archivos binarios y compilados
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Archivos de base de datos o almacenamiento local
+*.sqlite
+*.sqlite3
+
+# Archivos de caché de bundlers / linters
+.cache/
+.eslintcache
+.prettiercache
