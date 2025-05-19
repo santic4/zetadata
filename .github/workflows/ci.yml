@@ -18,14 +18,21 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install client dependencies
         run: npm ci
+        working-directory: client
 
-      - name: Run ESLint
+      - name: Install server dependencies
+        run: npm ci
+        working-directory: server
+
+      - name: Run ESLint (client)
         run: npm run lint
+        working-directory: client
 
-      - name: Check Prettier formatting
+      - name: Check Prettier formatting (client)
         run: npm run format -- --check
+        working-directory: client
 
   build-and-test:
     name: Build & Smoke Test Server
@@ -39,14 +46,23 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install server dependencies
         run: npm ci
+        working-directory: server
 
       - name: Build server
-        working-directory: server
         run: npm run build
+        working-directory: server
+
+      - name: Run ESLint (server)
+        run: npm run lint
+        working-directory: server
+
+      - name: Check Prettier formatting (server)
+        run: npm run format -- --check
+        working-directory: server
 
       - name: Smoke test server
         run: |
-          node server/dist/index.js & sleep 5
+          node server/dist/index.js & sleep 10
           curl --fail http://localhost:4000/health || exit 1
