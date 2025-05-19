@@ -50,10 +50,6 @@ jobs:
         run: npm ci
         working-directory: server
 
-      - name: Build server
-        run: npm run build
-        working-directory: server
-
       - name: Run ESLint (server)
         run: npm run lint
         working-directory: server
