@@ -61,5 +61,5 @@ jobs:
       - name: Smoke test server
         working-directory: server
         run: |
-          node app/app.mjs & sleep 10
+          node src/app/app.mjs & sleep 10
           curl --fail http://localhost:4000/health || exit 1
