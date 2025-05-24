@@ -19,4 +19,4 @@ ENV NODE_ENV=production PORT=4000
 EXPOSE 4000
 
 # Comando para iniciar la app
-CMD ["node", "src/app/app.js"]
+CMD ["node", "src/app/app.mjs"]

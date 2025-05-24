@@ -30,6 +30,7 @@ export default defineConfig([
     rules: {
       'no-unused-vars': ['warn'],
       'prettier/prettier': 'error',
+      "linebreak-style": ["error", "unix"]
     },
   },
 ]);
